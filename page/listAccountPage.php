@@ -1,7 +1,7 @@
 <?php
 include '../component/sidebar.php'
 ?>
-<div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px solid #17337A; boxshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 0px solid #17337A; boxshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <h4>DAFTAR USER</h4>
     <hr>
     <table class="table ">
@@ -9,7 +9,8 @@ include '../component/sidebar.php'
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama</th>
-        
+                <th scope="col">Email</th>
+    
                 <th scope="col">Aksi</th>
             </tr>
         </thead>
@@ -26,9 +27,10 @@ include '../component/sidebar.php'
  <tr>
  <th scope="row">' . $no . '</th>
  <td>' . $data['name'] . '</td>
+ <td>' . $data['email'] . '</td>
 
  <td>
- <a href="../page/editMahasiswa.php?id=' . $data['id'] . '"
+ <a href="../page/editAccount.php?id=' . $data['id'] . '"
  onClick="return confirm ( \'Yakin?\')">
  <i style="color: green" class="fa fa-edit"></i>
  </a>

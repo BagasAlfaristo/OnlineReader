@@ -2,11 +2,11 @@
 include '../component/sidebar.php'
 ?>
 <div class="container p-3 m-4 h-100"
-    style="background-color: #FFFFFF; border-top: 5px solid #17337A; boxshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    style="background-color: #FFFFFF; border-top: 0px solid #17337A; boxshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <h4>Edit Data USER</h4>
     <?php
     include('../db.php');
-    $id = $_GET['id'];
+    $id = 1;
     $query = mysqli_query($con, "SELECT * FROM users WHERE id='$id'") or die(mysqli_error($con));;
     $data = mysqli_fetch_assoc($query);
     ?>
@@ -20,7 +20,12 @@ include '../component/sidebar.php'
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
-            <input class="form-control" id="username" value="<?php echo $data['name'] ?>" name="username"
+            <input class="form-control" id="username" value="<?php echo $data['username'] ?>" name="username"
+                aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input class="form-control" id="email" value="<?php echo $data['email'] ?>" name="email"
                 aria-describedby="emailHelp" required>
         </div>
         <div class="mb-3">

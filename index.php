@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Required meta tags -->
+        <!-- Required meta tags 
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">-->
         <!-- Bootstrap CSS -->
         <title>Manga Reader</title>
         <meta charset="utf-8">
@@ -60,7 +60,7 @@
                 <div class="card text-dark bg-light ma-5 shadow" style="min-width: 25rem;">
                     <div class="card-header fw-bold">Login</div>
                     <div class="card-body">
-                        <form action="../process/loginProcess.php" method="post">
+                        <form action="./process/loginProcess.php" method="post">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Username</label>
                                 <input
@@ -79,7 +79,7 @@
                             </div>
                         </form>
                         <p class="mt-2 mb-0">Belum punya akun ?
-                            <a href="../page/registerPage.php" class="textprimary">Klik Disini!</a>
+                            <a href="./page/registerPage.php" class="textprimary">Klik Disini!</a>
                         </p>
                     </div>
                 </div>
